@@ -1,0 +1,28 @@
+{
+  "name": "devops-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:html": "htmlhint pages/**/*.html",
+    "lint:css": "stylelint assets/css/**/*.css",
+    "lint": "npm run lint:html && npm run lint:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asim12312/ucp-devops-project.git"
+  },
+  "author": "Muhammad Asim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asim12312/ucp-devops-project/issues"
+  },
+  "homepage": "https://github.com/Asim12312/ucp-devops-project#readme",
+  "description": "",
+  "devDependencies": {
+    "htmlhint": "^1.8.0",
+    "parcel": "^2.16.3",
+    "stylelint": "^17.0.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
