@@ -160,29 +160,53 @@ footer {
     background: var(--primary-color);
     color: var(--white);
     text-align: center;
-    padding: 3rem 1rem;
-    margin-top: 4rem;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 16px;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+/* ===== Courses Page Styling ===== */
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #222;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .navbar ul {
-        display: none;
-    }
+.page-header p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
 
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.course-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fafafa;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #00bcd4;
+}
+
+.course-card p {
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
