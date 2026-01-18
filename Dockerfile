@@ -1,7 +1,5 @@
 FROM nginx:alpine
 
-COPY pages/ /usr/share/nginx/html/
-
-COPY assets/ /usr/share/nginx/html/assets/
+COPY dist/ /usr/share/nginx/html/
 
 EXPOSE 80
