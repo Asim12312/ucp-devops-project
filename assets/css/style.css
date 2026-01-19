@@ -6,10 +6,10 @@
     --accent-color: #f59e0b;
     --text-color: #334155;
     --bg-color: #f8fafc;
-    --white: #ffffff;
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(255, 255, 255, 0.3);
+    --white: #fff;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+    --glass-bg: rgb(255 255 255 / 80%);
+    --glass-border: rgb(255 255 255 / 30%);
 }
 
 /* Reset */
@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     background: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -75,7 +75,7 @@ header {
 /* Hero Section */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+    background: linear-gradient(rgb(15 23 42 / 70%), rgb(15 23 42 / 70%)),
         url('../images/campus_hero.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -116,7 +116,7 @@ header {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.4);
+    box-shadow: 0 10px 15px -3px rgb(56 189 248 / 40%);
 }
 
 /* Grid Layout */
@@ -177,7 +177,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .navbar ul {
         display: none;
     }
@@ -230,5 +230,5 @@ footer {
 
 .course-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
 }
