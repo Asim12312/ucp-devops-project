@@ -1,8 +1,8 @@
-name: CD Pipeline
+name: DevOps CD - Development
 
 on:
   workflow_run:
-    workflows: ["DevOps CI Pipeline"]
+    workflows: ["DevOps CI - Development"]
     types:
       - completed
     branches:
@@ -26,8 +26,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Pull Docker Image
-        run: |
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:latest
+        run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:development
 
       - name: Trigger Deployment on Render
         run: |
