@@ -5,8 +5,6 @@ on:
     workflows: ["DevOps CI - Development"]
     types:
       - completed
-    branches:
-      - develop
 
 jobs:
   deploy:
@@ -26,8 +24,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Pull Docker Image
-        run: |
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:development
+        run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:development
 
       - name: Trigger Deployment on Render
         run: |
