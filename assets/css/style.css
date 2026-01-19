@@ -90,7 +90,7 @@ header {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    animation: fadeInUp 1s ease;
+    animation: fade-in-up 1s ease;
 }
 
 .hero-content p {
@@ -99,7 +99,7 @@ header {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    animation: fadeInUp 1s ease 0.2s backwards;
+    animation: fade-in-up 1s ease 0.2s backwards;
 }
 
 .cta-button {
@@ -111,7 +111,7 @@ header {
     border-radius: 50px;
     font-weight: 600;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 1s ease 0.4s backwards;
+    animation: fade-in-up 1s ease 0.4s backwards;
 }
 
 .cta-button:hover {
@@ -146,7 +146,7 @@ footer {
     margin-top: 4rem;
 }
 
-@keyframes fadeInUp {
+@keyframes fade-in-up {
     from {
         opacity: 0;
         transform: translateY(20px);
