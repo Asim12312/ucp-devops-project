@@ -27,7 +27,7 @@ jobs:
 
       - name: Pull Docker Image
         run: |
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:latest
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:development
 
       - name: Trigger Deployment on Render
         run: |
