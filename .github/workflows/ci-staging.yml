@@ -63,4 +63,4 @@ jobs:
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:latest .
 
       - name: Push to Docker Hub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/ucp-devops-project:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:latest
