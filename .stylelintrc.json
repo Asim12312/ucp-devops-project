@@ -3,7 +3,6 @@
         "stylelint-config-standard"
     ],
     "rules": {
-        "no-empty-source": null,
-        "keyframes-name-pattern": "^[a-z][a-zA-Z0-9]+$"
+        "no-empty-source": null
     }
 }
