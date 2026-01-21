@@ -1,4 +1,4 @@
-name: DevOps CI Pipeline
+name: DevOps CI - Staging
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
@@ -34,7 +34,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
       - run: npm install
       - run: npm run build
       - uses: actions/upload-artifact@v4
@@ -60,7 +60,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:latest .
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:staging .
 
       - name: Push to Docker Hub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/ucp-devops-project:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/ucp-devops-project:staging

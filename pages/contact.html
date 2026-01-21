@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | UCP Computer Science</title>
+    <title>Contact Us | GIU</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
@@ -13,6 +13,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
+                <a href="index.html" class="logo">GIU.</a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="courses.html">Courses</a></li>
@@ -28,57 +29,62 @@
         <div class="container">
             <section class="section-header animate-fade-in">
                 <h1>Get in <span style="color: var(--primary);">Touch</span></h1>
-                <p>Have questions? We're here to help. Reach out to us for any queries related to admissions, courses,
-                    or research.</p>
+                <p>Have questions? We're here to help you navigate your journey at Global Innovation University. Reach
+                    out to us today.</p>
             </section>
 
-            <div class="grid animate-fade-in" style="animation-delay: 0.2s; grid-template-columns: 1fr 1.5fr;">
+            <div class="contact-container animate-fade-in" style="animation-delay: 0.2s; margin-bottom: 6rem;">
                 <!-- Contact Info -->
                 <div class="glass-card">
                     <h2 style="margin-bottom: 2rem;">Contact Information</h2>
 
-                    <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-                        <div style="font-size: 1.5rem;">📍</div>
+                    <div style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <div style="font-size: 2rem; color: var(--primary);">📍</div>
                         <div>
-                            <div style="font-weight: 700;">Our Location</div>
-                            <p style="color: var(--text-muted);">1-Khayaban-e-Jinnah, Johar Town, Lahore, Pakistan</p>
+                            <div style="font-weight: 700; margin-bottom: 0.25rem;">Our Location</div>
+                            <p style="color: var(--text-muted);">1-Khayaban-e-Jinnah, Johar Town, Lahore, Punjab,
+                                Pakistan</p>
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-                        <div style="font-size: 1.5rem;">📧</div>
+                    <div style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <div style="font-size: 2rem; color: var(--primary);">📧</div>
                         <div>
-                            <div style="font-weight: 700;">Email Us</div>
-                            <p style="color: var(--text-muted);">info@ucp.edu.pk<br>cs.dept@ucp.edu.pk</p>
+                            <div style="font-weight: 700; margin-bottom: 0.25rem;">Email Us</div>
+                            <p style="color: var(--text-muted);">info@ucp.edu.pk<br>admissions@ucp.edu.pk</p>
                         </div>
                     </div>
 
-                    <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-                        <div style="font-size: 1.5rem;">📞</div>
+                    <div style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <div style="font-size: 2rem; color: var(--primary);">📞</div>
                         <div>
-                            <div style="font-weight: 700;">Call Us</div>
-                            <p style="color: var(--text-muted);">+92 42 111 000 827</p>
+                            <div style="font-weight: 700; margin-bottom: 0.25rem;">Call Us</div>
+                            <p style="color: var(--text-muted);">+92 42 111 000 827<br>Mon - Fri, 9am - 5pm</p>
                         </div>
                     </div>
 
                     <div
-                        style="margin-top: 3rem; background: var(--border); height: 200px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
-                        [Embedded Map Placeholder]
+                        style="margin-top: 3rem; border-radius: var(--radius); overflow: hidden; height: 250px; border: 1px solid var(--border);">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.541456157057!2d74.2642193151478!3d31.442973981395806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919017432b1835b%3A0xe3ca6968c923b1!2sUniversity%20of%20Central%20Punjab!5e0!3m2!1sen!2s!4v1672561580000!5m2!1sen!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <div class="card">
+                <div class="card" style="padding: 2.5rem;">
                     <h2 style="margin-bottom: 2rem;">Send us a message</h2>
-                    <form>
-                        <div class="grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 1.5rem;">
+                    <form id="contactForm">
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
-                                <input type="text" id="name" placeholder="John Doe" required>
+                                <input type="text" id="name" placeholder="Muhammad Asim" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" id="email" placeholder="john@example.com" required>
+                                <input type="email" id="email" placeholder="mazammasim@gmail.com" required>
                             </div>
                         </div>
 
@@ -89,10 +95,13 @@
 
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" rows="6" placeholder="How can we help you?" required></textarea>
+                            <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
                         </div>
 
-                        <button type="submit" style="width: 100%;">Send Message</button>
+                        <button type="submit" id="submitBtn">Send Message</button>
+                        <p id="formStatus"
+                            style="display:none; margin-top: 1.5rem; color: #10b981; font-weight: 600; text-align: center;">
+                            ✓ Message sent successfully!</p>
                     </form>
                 </div>
             </div>
@@ -101,9 +110,27 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 UCP Computer Science Department. All rights reserved.</p>
+            <p>&copy; 2026 Global Innovation University. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const status = document.getElementById('formStatus');
+
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = 'Message Sent!';
+                status.style.display = 'block';
+                btn.style.background = '#10B981';
+                this.reset();
+            }, 1200);
+        });
+    </script>
 
 </body>
 

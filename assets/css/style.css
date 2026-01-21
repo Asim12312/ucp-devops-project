@@ -1,27 +1,41 @@
 /* Inter Font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* Design Tokens */
 :root {
     --primary: #4f46e5;
+
     /* Indigo */
     --primary-hover: #4338ca;
-    --secondary: #f43f5e;
-    /* Rose/Coral */
-    --accent: #0ea5e9;
+    --secondary: #0ea5e9;
+
     /* Sky Blue */
+    --accent: #f59e0b;
+
+    /* Amber */
     --bg-main: #f8fafc;
+
     /* Slate 50 */
-    --bg-card: #ffffff;
+    --bg-card: #fff;
     --text-main: #1e293b;
+
     /* Slate 800 */
     --text-muted: #64748b;
+
     /* Slate 500 */
     --border: #e2e8f0;
+
     /* Slate 200 */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --white: #fff;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+
+    /* Glassmorphism */
+    --glass-bg: rgb(255 255 255 / 70%);
+    --glass-border: rgb(255 255 255 / 30%);
     --radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -40,11 +54,12 @@ html {
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
     background-color: var(--bg-main);
     color: var(--text-main);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 /* Base Typography */
@@ -53,6 +68,7 @@ h2,
 h3,
 h4 {
     color: #0f172a;
+
     /* Slate 900 */
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -67,20 +83,34 @@ h4 {
 
 /* Header & Navigation */
 header {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgb(255 255 255 / 82%);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
     padding: 1rem 0;
+    transition: var(--transition);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: -0.025em;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 2.5rem;
 }
 
@@ -91,6 +121,10 @@ header {
     font-size: 1rem;
     transition: var(--transition);
     position: relative;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary);
 }
 
 .navbar ul li a::after {
@@ -104,31 +138,76 @@ header {
     transition: var(--transition);
 }
 
-.navbar ul li a:hover {
-    color: var(--primary);
-}
-
 .navbar ul li a:hover::after {
     width: 100%;
 }
 
 /* Main Content Area */
 main {
-    padding: 4rem 0;
+    padding-top: 6rem;
+
+    /* Accounting for fixed header */
     min-height: 80vh;
 }
 
-/* Glassmorphism Card Utility */
-.glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--shadow-md);
+/* Footer */
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 4rem 1rem;
+    text-align: center;
+    margin-top: 4rem;
 }
 
-/* Section Styling */
+footer p {
+    font-size: 0.95rem;
+}
+
+/* Hero Section Styling */
+.hero {
+    padding: 8rem 0;
+    text-align: center;
+    background: radial-gradient(circle at top right, #e0e7ff, transparent),
+        radial-gradient(circle at bottom left, #dcfce7, transparent);
+    margin-top: -2rem;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #1e293b 0%, #4f46e5 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 10px 15px -3px rgb(79 70 229 / 30%);
+}
+
+.cta-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 25px -5px rgb(79 70 229 / 40%);
+}
+
+/* Section Header */
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -141,14 +220,14 @@ main {
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: -0.025em;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    -webkit-background-clip: text;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
 }
 
 .section-header p {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--text-muted);
 }
 
@@ -177,25 +256,74 @@ main {
     border-color: var(--primary);
 }
 
-.card h2 {
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.card h2,
+.card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-.card .badge {
+.card p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.badge {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
+    padding: 0.35rem 1rem;
     background: #e0e7ff;
     color: var(--primary);
     border-radius: 9999px;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    margin-top: auto;
     width: fit-content;
 }
 
+/* Faculty Specifics */
+.faculty-card {
+    text-align: center;
+    align-items: center;
+}
+
+.faculty-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
 /* Form Styling */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+@media (width <=968px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -205,79 +333,50 @@ label {
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
+    color: #475569;
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.875rem 1rem;
     border: 1px solid var(--border);
     border-radius: 8px;
     font-family: inherit;
+    font-size: 1rem;
     transition: var(--transition);
+    background: #fdfdfd;
 }
 
 input:focus,
 textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    box-shadow: 0 0 0 4px rgb(79 70 229 / 10%);
+    background: #fff;
 }
 
-button {
+button[type="submit"] {
+    width: 100%;
     background: var(--primary);
     color: white;
     border: none;
-    padding: 0.75rem 2rem;
+    padding: 1rem;
     border-radius: 8px;
     font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
     transition: var(--transition);
 }
 
-button:hover {
+button[type="submit"]:hover {
     background: var(--primary-hover);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
-}
-
-/* Hero Section Styling */
-.hero {
-    padding: 8rem 0;
-    text-align: center;
-    background: radial-gradient(circle at top right, #e0e7ff, transparent),
-        radial-gradient(circle at bottom left, #dcfce7, transparent);
-}
-
-.hero h1 {
-    font-size: 4.5rem;
-    font-weight: 900;
-    line-height: 1;
-    margin-bottom: 1.5rem;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    max-width: 800px;
-    margin: 0 auto 3rem;
-}
-
-/* Footer */
-footer {
-    background: #0f172a;
-    color: #94a3b8;
-    padding: 4rem 0;
-    text-align: center;
-    margin-top: 4rem;
-}
-
-footer p {
-    font-size: 0.9rem;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Animations */
-@keyframes fadeIn {
+@keyframes fade-in-up {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -290,21 +389,22 @@ footer p {
 }
 
 .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fade-in-up 0.8s ease-out forwards;
 }
 
 /* Responsive Scaling */
-@media (max-width: 768px) {
+@media (width <=768px) {
     .hero h1 {
         font-size: 3rem;
     }
 
-    .hero p {
-        font-size: 1.1rem;
+    .navbar ul {
+        display: none;
+
+        /* In a real app, implement a mobile menu */
     }
 
-    .navbar ul {
-        gap: 1rem;
-        flex-wrap: wrap;
+    .hero p {
+        font-size: 1.1rem;
     }
 }
