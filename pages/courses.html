@@ -4,95 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-
+    <title>Courses | UCP Computer Science</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="admissions.html">Admissions</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="courses-page">
+    <main>
+        <div class="container">
+            <section class="section-header animate-fade-in">
+                <h1>Academic <span style="color: var(--primary);">Programs</span></h1>
+                <p>Explore our wide range of world-class courses designed to prepare you for the challenges of
+                    tomorrow's tech landscape.</p>
 
-    <section class="page-header">
-        <h1>Courses Offered</h1>
-        <p>
-            The Computer Science Department offers a comprehensive curriculum
-            designed to equip students with strong theoretical foundations
-            and practical skills required in the modern IT industry.
-        </p>
-    </section>
+                <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center;">
+                    <input type="text" placeholder="Search courses..." style="max-width: 400px;">
+                    <button style="padding: 0.75rem 1.5rem;">Filter</button>
+                </div>
+            </section>
 
-    <section class="courses-list">
+            <div class="grid animate-fade-in" style="animation-delay: 0.2s;">
+                <!-- Course 1 -->
+                <div class="card">
+                    <div style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">CS101</div>
+                    <h2>Introduction to Programming</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Master the fundamentals of logic building and problem-solving using modern high-level languages
+                        like Python and C++.
+                    </p>
+                    <div class="badge">1st Semester</div>
+                </div>
 
-        <div class="course-card">
-            <h2>Introduction to Programming</h2>
-            <p>
-                This course introduces fundamental programming concepts using
-                a high-level programming language. Students learn problem
-                solving, logic building, and basic coding practices.
-            </p>
-            <p><strong>Semester:</strong> 1st Semester</p>
+                <!-- Course 2 -->
+                <div class="card">
+                    <div style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">CS203</div>
+                    <h2>Data Structures & Algorithms</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        The core of computer science. Learn to optimize code performance through advanced structural
+                        organization and algorithmic efficiency.
+                    </p>
+                    <div class="badge">3rd Semester</div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="card">
+                    <div style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">CS301</div>
+                    <h2>Database Systems</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Design, implement, and manage complex data architectures using SQL, NoSQL, and modern
+                        cloud-based storage solutions.
+                    </p>
+                    <div class="badge">4th Semester</div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="card">
+                    <div style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">CS401</div>
+                    <h2>Software Engineering</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Learn the industry-standard SDLC practices, Agile methodologies, and project management for
+                        large-scale software systems.
+                    </p>
+                    <div class="badge">5th Semester</div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="card">
+                    <div style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">CS405</div>
+                    <h2>Artificial Intelligence</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Dive into the world of neural networks, machine learning, and computer vision. Build systems
+                        that can learn and adapt.
+                    </p>
+                    <div class="badge">7th Semester</div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="card">
+                    <div style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem;">CS410</div>
+                    <h2>Cyber Security</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Protect digital assets by mastering ethical hacking, cryptography, and network defense
+                        strategies.
+                    </p>
+                    <div class="badge">Elective</div>
+                </div>
+            </div>
         </div>
-
-        <div class="course-card">
-            <h2>Data Structures and Algorithms</h2>
-            <p>
-                Covers essential data structures such as arrays, linked lists,
-                stacks, queues, trees, and graphs along with algorithm design
-                and complexity analysis.
-            </p>
-            <p><strong>Semester:</strong> 3rd Semester</p>
-        </div>
-
-        <div class="course-card">
-            <h2>Database Systems</h2>
-            <p>
-                Focuses on database design, SQL, normalization, and transaction
-                management. Students gain hands-on experience with relational
-                database systems.
-            </p>
-            <p><strong>Semester:</strong> 4th Semester</p>
-        </div>
-
-        <div class="course-card">
-            <h2>Software Engineering</h2>
-            <p>
-                Introduces software development life cycle models, requirement
-                analysis, system design, testing techniques, and project
-                management principles.
-            </p>
-            <p><strong>Semester:</strong> 5th Semester</p>
-        </div>
-
-        <div class="course-card">
-            <h2>Artificial Intelligence</h2>
-            <p>
-                Provides an overview of intelligent systems including search
-                algorithms, knowledge representation, machine learning basics,
-                and real-world AI applications.
-            </p>
-            <p><strong>Semester:</strong> 7th Semester</p>
-        </div>
-
-    </section>
-
-</main>
-
+    </main>
 
     <footer>
-        <p>© 2025 Your Website. All rights reserved.</p>
+        <div class="container">
+            <p>© 2025 UCP Computer Science Department. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>

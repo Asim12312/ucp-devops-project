@@ -4,31 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-
+    <title>Contact Us | UCP Computer Science</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="admissions.html">Admissions</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <div class="container">
+            <section class="section-header animate-fade-in">
+                <h1>Get in <span style="color: var(--primary);">Touch</span></h1>
+                <p>Have questions? We're here to help. Reach out to us for any queries related to admissions, courses,
+                    or research.</p>
+            </section>
 
+            <div class="grid animate-fade-in" style="animation-delay: 0.2s; grid-template-columns: 1fr 1.5fr;">
+                <!-- Contact Info -->
+                <div class="glass-card">
+                    <h2 style="margin-bottom: 2rem;">Contact Information</h2>
+
+                    <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                        <div style="font-size: 1.5rem;">📍</div>
+                        <div>
+                            <div style="font-weight: 700;">Our Location</div>
+                            <p style="color: var(--text-muted);">1-Khayaban-e-Jinnah, Johar Town, Lahore, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                        <div style="font-size: 1.5rem;">📧</div>
+                        <div>
+                            <div style="font-weight: 700;">Email Us</div>
+                            <p style="color: var(--text-muted);">info@ucp.edu.pk<br>cs.dept@ucp.edu.pk</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                        <div style="font-size: 1.5rem;">📞</div>
+                        <div>
+                            <div style="font-weight: 700;">Call Us</div>
+                            <p style="color: var(--text-muted);">+92 42 111 000 827</p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 3rem; background: var(--border); height: 200px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+                        [Embedded Map Placeholder]
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="card">
+                    <h2 style="margin-bottom: 2rem;">Send us a message</h2>
+                    <form>
+                        <div class="grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 1.5rem;">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="General Inquiry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="6" placeholder="How can we help you?" required></textarea>
+                        </div>
+
+                        <button type="submit" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>© 2025 Your Website. All rights reserved.</p>
+        <div class="container">
+            <p>© 2025 UCP Computer Science Department. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
