@@ -6,8 +6,9 @@
     "lint:html": "htmlhint pages/**/*.html",
     "lint:css": "stylelint assets/css/**/*.css",
     "lint": "npm run lint:html && npm run lint:css",
-    "build": "parcel build pages/*.html --public-url ./"
+    "build": "parcel build pages/*.html --public-url /"
   },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Asim12312/ucp-devops-project.git"
