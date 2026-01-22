@@ -90,12 +90,18 @@ Distributed under the ISC License. See `LICENSE` (if applicable) or `package.jso
 
 ## 👨‍💻 Team Members
 
-**Muhammad Asim**
--   GitHub: [@Asim12312](https://github.com/Asim12312)
--   Project Link: [ucp-devops-project](https://github.com/Asim12312/ucp-devops-project)
+### 🔹 Muhammad Asim  
+- GitHub: [@Asim12312](https://github.com/Asim12312)  
+- Role: Lead Developer / DevOps  
 
-**Sharjeel**
-**Ahmad Hassan**
-**Muhammad Yasir Raza**
+### 🔹 Sharjeel  
+- Role: Developer  
+
+### 🔹 Ahmad Hassan  
+- Role: Developer  
+
+### 🔹 Muhammad Yasir Raza  
+- Role: Developer  
+
 ---
 <p align="center">Made with ❤️ for DevOps Excellence</p>
