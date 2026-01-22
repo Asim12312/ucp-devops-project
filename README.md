@@ -88,11 +88,14 @@ Distributed under the ISC License. See `LICENSE` (if applicable) or `package.jso
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Team Members
 
 **Muhammad Asim**
 -   GitHub: [@Asim12312](https://github.com/Asim12312)
 -   Project Link: [ucp-devops-project](https://github.com/Asim12312/ucp-devops-project)
 
+**Sharjeel**
+**Ahmad Hassan**
+**Muhammad Yasir Raza**
 ---
 <p align="center">Made with ❤️ for DevOps Excellence</p>
