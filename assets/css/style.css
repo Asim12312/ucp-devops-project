@@ -231,7 +231,7 @@ footer {
 }
 
 /* Responsive Fix */
-@media (width <= 600px) {
+@media (width <=600px) {
     main {
         padding: 20px;
     }
